@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+}
+
+#header {
+    border-radius: 0;
+    font-size: 1em;
+    padding: 20px 20px 20px 20px;
+}
+
+#body {
+    min-height: 100%;
+}
+
+#brand {
+    font-size: 2em;
+}
+
+.footer {
+    padding-bottom: 100px;
+}
+
+a:link {
+    color: black;
+}

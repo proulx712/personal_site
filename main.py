@@ -7,8 +7,18 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=['GET'])
-def home():
-    return render_template('home.html')
+def get_home():
+    return render_template('pages/home.html')
+
+
+@app.route('/resume', methods=['GET'])
+def get_resume():
+    return render_template('pages/resume.html')
+
+
+@app.route('/contact', methods=['GET'])
+def get_contact():
+    return render_template('pages/contact.html')
 
 
 @app.errorhandler(500)

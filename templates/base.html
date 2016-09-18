@@ -6,7 +6,7 @@
     <title>{% block title %}Eric Proulx{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Eric Proulx">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -19,69 +19,56 @@
         <!-- This file stores project-specific CSS -->
         <link href={{ url_for('static', filename='css/base.css') }} rel="stylesheet">
 
-        <!-- Latest compiled and minified Bootstrap 4 Alpha 3 CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css"
-              integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY"
-              crossorigin="anonymous">
-
         <!-- Third-party CSS libraries go here -->
+        <script src="https://use.typekit.net/fwh3spk.js"></script>
+        <script>try {
+            Typekit.load({async: true});
+        } catch (e) {
+        }</script>
+
+        <!-- Extra CSS -->
         {% block extraCSS %}
         {% endblock %}
     {% endblock %}
 </head>
 <body>
-{#<body style="background-image:{{ url_for('static', filename='images/weather.png') }};">#}
-<body background="{{ url_for('static', filename='images/stardust.png') }}">
-{#url({{'images/weather.png'}})#}
-<div id="site">
-    <nav class="navbar navbar-light bg-faded">
-        <div class="nav navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">About</a>
-            <a class="nav-item nav-link" href="#">Resume</a>
-            <a class="nav-item nav-link" href="#">Blog</a>
-            <a class="nav-item nav-link" href="#">Contact</a>
+<div id="body-container">
+    <div id="header">
+        <div id="navigation">
+            <ul class="nav-collapse" id="nav-collapse">
+                <li><a href="{{ url_for('get_home') }}">HOME</a></li>
+                <li><a href="{{ url_for('get_resume') }}">RESUME</a></li>
+                <li><a href="{{ url_for('get_contact') }}">CONTACT</a></li>
+                <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a></li>
+            </ul>
         </div>
-    </nav>
-
-    <div class="container">
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
-            {% endfor %}
-        {% endif %}
-
+        <div id="brand">
+            <h1>Eric M Proulx</h1>
+        </div>
+    </div>
+    <div id="main">
         {% block content %}
         {% endblock content %}
     </div>
-
-    <footer class="footer-basic-centered">
-        <p class="footer-company-motto">Just train your body.</p>
-        <p class="footer-links">
-            <a href="https://github.com/proulx712" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/proulxeric" target="_blank"><i class="fa fa-linkedin fa-3x"
-                                                                                aria-hidden="true"></i></a>
-            <a href="mailto:eric@ericproulx.com?Subject=Your%20Website%20Looks%20Great!" target="_top"><i
-                    class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a>
-        </p>
-
-        <p class="footer-company-name">&copy; 2016 Eric Proulx. All rights reserved</p>
-    </footer>
+</div>
+<div id="footer">
+    <div id="links">
+        <ul>
+            <li><a href="https://github.com/proulx712" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/proulxeric" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:eric@ericproulx.com?Subject=Your%20Website%20Looks%20Great!" target="_top"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <div id="disclaimer">
+        <span class="text-muted">
+            &copy; 2016 Eric Proulx. All rights reserved
+        </span>
+    </div>
 </div>
 
 {% block javascript %}
-    <!-- Required by Bootstrap v4 Alpha 3 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"
-            integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"
-            integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"
-            integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD"
-            crossorigin="anonymous"></script>
-
     <!-- Third-party javascript libraries go here -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/f59bd3569d.js"></script>
     <!-- project specific Javascript -->
     <script src={{ url_for('static', filename='js/base.js') }}></script>
