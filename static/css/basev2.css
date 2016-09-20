@@ -1,0 +1,143 @@
+html, body {
+    font-family: "fira-sans", sans-serif;
+    font-style: normal;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+#body-container {
+    min-height: 100%;
+}
+
+#header {
+    height: 80px;
+    background-color: #444444;
+    color: white;
+}
+
+#brand {
+    padding: 20px 0px 0px 50px;
+}
+
+#navigation {
+    padding-top: 20px;
+    padding-right: 50px;
+    float: right;
+}
+
+ul.nav-collapse {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.nav-collapse li {
+    float: left;
+}
+
+ul.nav-collapse li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: None;
+}
+
+ul.nav-collapse li a:hover {
+    color: darkgray;
+}
+
+ul.nav-collapse li.icon {
+    display: none;
+}
+
+#main {
+    overflow: auto;
+    padding: 20px 50px 150px;
+}
+
+#footer {
+    position: relative;
+    margin-top: -150px;
+    height: 150px;
+    background-color: #444444;
+    clear: both;
+    text-align: center;
+    color: white;
+    padding: 20px 50px 20px
+}
+
+#links {
+    padding-bottom: 10px;
+}
+
+#links li {
+    display: inline;
+    padding: 0 20px;
+
+}
+
+#links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.fa {
+    color: white;
+}
+
+.fa:hover {
+    color: darkgray;
+}
+
+@media screen and (max-width: 680px) {
+    ul.nav-collapse li:not(:first-child) {
+        display: none;
+    }
+
+    ul.nav-collapse li.icon {
+        float: right;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    ul.nav-collapse.responsive {
+        background-color: #444444;
+        position: relative;
+        padding-right: 25px;
+    }
+
+    ul.nav-collapse.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    ul.nav-collapse.responsive li {
+        float: none;
+        display: inline;
+    }
+
+    ul.nav-collapse.responsive li a {
+        display: block;
+        text-align: left;
+        height: 100%;
+    }
+}
+
+@Media screen and (max-width: 450px) {
+    #brand {
+        font-size: 10px;
+        padding-top:30px;
+    }
+}
