@@ -11,12 +11,6 @@ h1 {
     margin: 0;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    width: auto \9;
-}
-
 #body-container {
     min-height: 100%;
 }
@@ -28,8 +22,7 @@ img {
 }
 
 #brand {
-    padding-top: 20px;
-    padding-left: 50px;
+    padding: 20px 0px 0px 50px;
 }
 
 #navigation {
@@ -121,7 +114,7 @@ ul.nav-collapse li.icon {
     ul.nav-collapse.responsive {
         background-color: #444444;
         position: relative;
-        padding-right:25px;
+        padding-right: 25px;
     }
 
     ul.nav-collapse.responsive li.icon {
@@ -138,12 +131,13 @@ ul.nav-collapse li.icon {
     ul.nav-collapse.responsive li a {
         display: block;
         text-align: left;
-        height:100%;
+        height: 100%;
     }
 }
 
-@Media screen and (max-width: 400px) {
+@Media screen and (max-width: 450px) {
     #brand {
-        font-size: smaller;
+        font-size: 10px;
+        padding-top:30px;
     }
 }
