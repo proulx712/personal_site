@@ -3,6 +3,10 @@ html, body {
     height: 100%;
 }
 
+body {
+    /*margin-bottom: 107px;*/
+}
+
 #brand-name {
     color: white;
     font-size: x-large;
@@ -11,4 +15,9 @@ html, body {
 #main-body {
     padding-top: 25px;
     padding-bottom: 25px;
+    min-height: 100%;
+}
+
+.footer {
+    bottom: 0;
 }

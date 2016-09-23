@@ -21,6 +21,11 @@ def get_contact():
     return render_template('pages/contact.html')
 
 
+@app.route('/about', methods=['GET'])
+def get_about():
+    return render_template('pages/about.html')
+
+
 @app.errorhandler(500)
 def server_error(e):
     # Log the error and stacktrace.

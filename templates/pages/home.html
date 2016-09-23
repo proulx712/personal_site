@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% set active_page = "home" %}
 
 {% block title %}Home{% endblock %}
 
@@ -7,8 +8,15 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Some things about me</h2>
-    <p>
-        I do lots of stuff
-    </p>
+    <h1 class="text-xs-center">Hello!</h1>
+    <p class="text-xs-center">As suggested by my domain name, my name is Eric Proulx. I'm a Seattle native with no
+        particular coffee/beer
+        preferences and no neckbeard.</p>
+    <p class="text-xs-center">I am primarily a back end developer which is why my personal website looks like a college
+        student's last
+        minute
+        assignment. I'm working on it though.</p>
+    <p class=" text-xs-center"><img src="{{ url_for('static', filename='images/ericproulx.jpg') }}"
+                                    id="profile_picture"></p>
+
 {% endblock %}
