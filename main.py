@@ -1,7 +1,8 @@
 # [START app]
 import logging
 
-from flask import Flask, render_template
+from flask import Flask, make_response, render_template
+from flask import send_file
 
 app = Flask(__name__)
 
@@ -14,6 +15,15 @@ def get_home():
 @app.route('/resume', methods=['GET'])
 def get_resume():
     return render_template('pages/resume.html')
+
+
+@app.route('/download', methods=['POST'])
+def download_resume():
+    # response = make_response('static/docs/PROULXRESUME.pdf')
+    # response.headers['Content-Type'] = 'application/pdf'
+    # response.headers['Content-Disposition'] = 'inline; filename=PROULXRESUME.pdf'
+    # return response
+    return send_file('docs/PROULXRESUME.pdf', as_attachment=True)
 
 
 @app.route('/contact', methods=['GET'])
