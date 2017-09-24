@@ -1,0 +1,20 @@
+{
+  "name": "ericproulx",
+  "homepage": "ericproulx.com",
+  "authors": [
+    "EricP <proulx712@gmail.com>"
+  ],
+  "description": "personal site",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.6.1"
+  }
+}

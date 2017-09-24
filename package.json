@@ -1,0 +1,30 @@
+{
+  "name": "ericproulx",
+  "version": "1.0.0",
+  "description": "**My Website** This is code for my website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proulx712/personal_site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/proulx712/personal_site/issues"
+  },
+  "homepage": "https://github.com/proulx712/personal_site#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "bower": "^1.8.2"
+  },
+  "dependencies": {
+    "latest-version": "^3.1.0"
+  }
+}
