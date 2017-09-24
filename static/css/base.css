@@ -1,23 +1,94 @@
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
 html, body {
-    font-family: "fira-sans", sans-serif;
+    font-family: 'Dosis', sans-serif;
     height: 100%;
+    margin: 0 auto;
 }
 
-body {
-    /*margin-bottom: 107px;*/
+#website {
+
 }
 
-#brand-name {
+#header {
+    background-color: #4286f4;
+    font-size: 24px;
+    padding: 25px;
+    text-align: left;
+}
+
+#content {
+    text-align: left;
+}
+
+#skills {
+    padding: 25px;
+    background-color: #abb5c6;
+}
+
+#work {
+    padding: 25px;
+}
+
+#education {
+    padding: 25px;
+    background-color: #4b2e83;
     color: white;
-    font-size: x-large;
 }
 
-#main-body {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    min-height: 100%;
+#sub-skill-headers{
+    padding-top: 20px;
 }
 
-.footer {
-    bottom: 0;
+.sub-skill {
+    width: 33%;
+    font-size: 15px;
+    display: inline-block;
+    text-align: left;
+}
+
+.icon {
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.custom-header {
+    padding-left: 25px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.header-image {
+    text-align: left;
+    width: 33%;
+    display:inline-block;
+    padding-bottom: 10px;
+}
+
+#footer {
+    text-align: center;
+    font-size: 14px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.main-header {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.content-block {
+    font-size: 20px;
 }
