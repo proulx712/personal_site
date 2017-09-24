@@ -1,0 +1,21 @@
+{
+  "name": "ericproulx",
+  "description": "**My Website** This is code for my website",
+  "main": "index.js",
+  "authors": [
+    "ericp"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/proulx712/personal_site",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./static/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.4.4"
+  }
+}
