@@ -9,27 +9,12 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def get_home():
-    return render_template('pages/home.html')
-
-
-@app.route('/resume', methods=['GET'])
-def get_resume():
-    return render_template('pages/resume.html')
+    return render_template('base.html')
 
 
 @app.route('/download', methods=['POST'])
 def download_resume():
-    return send_file('docs/PROULXRESUME.pdf', as_attachment=True)
-
-
-@app.route('/contact', methods=['GET'])
-def get_contact():
-    return render_template('pages/contact.html')
-
-
-@app.route('/about', methods=['GET'])
-def get_about():
-    return render_template('pages/about.html')
+    return send_file('docs/PROULX_RESUME.pdf', as_attachment=True)
 
 
 @app.errorhandler(500)

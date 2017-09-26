@@ -1,23 +1,20 @@
+/*body {*/
+  /*padding-top: 2rem;*/
+  /*padding-bottom: 2rem;*/
+/*}*/
+
 html, body {
-    font-family: "fira-sans", sans-serif;
+    font-family: 'Source Code Pro', monospace;
     height: 100%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-body {
-    /*margin-bottom: 107px;*/
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-#brand-name {
-    color: white;
-    font-size: x-large;
-}
-
-#main-body {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    min-height: 100%;
-}
-
-.footer {
-    bottom: 0;
+h2 {
+    font-family: 'Dosis', sans-serif;
 }
