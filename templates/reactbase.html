@@ -2,49 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Eric's Homepage</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Eric Proulx{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The wonderful portfolio site of Eric Proulx">
+    <meta name="author" content="Eric Proulx">
+    <link rel="shortcut icon" href={{ url_for('static', filename='images/favicon.ico') }}>
+
     <script src="{{ url_for('static', filename='bower_components/react/react.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bower_components/react/react-dom.min.js') }}"></script>
 
+    <h1>Flask React</h1>
+    <div id="content"></div>
 
     <script type="text/jsx">
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+        /*** @jsx React.DOM */
 
-      /*** @jsx React.DOM */
+          var realPython = React.createClass({
+            render: function() {
+              return (<h2>Greetings, from Real Python!</h2>);
+            }
+          });
 
-      var realPython = React.createClass({
-        render: function() {
-          return (<h2>Greetings, from Real Python!</h2>);
-        }
-      });
-
-      ReactDOM.render(
-        React.createElement(realPython, null),
-        document.getElementById('content')
-      );
-
+          ReactDOM.render(
+            React.createElement(realPython, null),
+            document.getElementById('content')
+          );
     </script>
-{#    <script type="text/jsx" src={{ url_for('static', filename='js/base.jsx') }}></script>#}
-
-    <link rel="shortcut icon" href={{ url_for('static', filename='images/favicon.ico') }}>
 </head>
 
 <body>
-    <div class="container">
-      <h1>Flask React</h1>
-      <br>
-      <div id="content"></div>
-    </div>
-  </body>
-{#<body>#}
-{#<div id="root">#}
-{#  <!-- This div's content will be managed by React. -->#}
-{#</div>#}
-{#</body>#}
-
-<script type="text/jsx">
-    ReactDOM.render(
-    <h1>Hello, world!</h1>,
-    document.getElementById('root')
-);
-</script>
+</body>
 </html>
