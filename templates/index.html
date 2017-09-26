@@ -2,8 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://unpkg.com/vue"></script>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>(% block title %)Eric Proulx(% endblock title %)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The wonderful portfolio site of Eric Proulx">
+    <meta name="author" content="Eric Proulx">
+
+    <link rel="shortcut icon" href={{ url_for('static', filename='images/favicon.ico') }}>
+
+    
     <script src="(( url_for('static', filename='bower_components/vue/dist/vue.min.js') ))"></script>
 </head>
 <body>

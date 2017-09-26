@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "vue": "^2.4.4"
+    "vue": "^2.4.4",
+    "vue-grid": "^0.1.2"
   }
 }
