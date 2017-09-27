@@ -12,7 +12,7 @@ def get_home():
     return render_template('base.html')
 
 
-@app.route('/download', methods=['POST'])
+@app.route('/download', methods=['GET'])
 def download_resume():
     return send_file('docs/PROULX_RESUME.pdf', as_attachment=True)
 
