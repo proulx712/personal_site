@@ -17,6 +17,12 @@ def download_resume():
     return send_file('docs/PROULX_RESUME.pdf', as_attachment=True)
 
 
+@app.after_request
+def add_header(response):
+    response.headers['Cache-Control'] = 'public, max-age=300000'
+    return response
+
+
 @app.errorhandler(500)
 def server_error(e):
     # Log the error and stacktrace.
