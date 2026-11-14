@@ -1,13 +1,1 @@
-beautifulsoup4==4.6.0
-click==6.7
-Flask==0.12.2
-itsdangerous==0.24
-Jinja2==2.9.6
-MarkupSafe==1.0
-pytz==2017.2
-six==1.11.0
-waitress==1.0.2
-webapp2==2.5.2
-WebOb==1.7.3
-WebTest==2.0.28
-Werkzeug==0.12.2
+# No dependencies - the site is static. App Engine installs gunicorn automatically.

@@ -1,12 +1,31 @@
-runtime: python27
-api_version: 1
-threadsafe: true
+# App Engine standard, Python 3 runtime.
+# The site is fully static: every URL below is served straight from files,
+# so main.py is only a fallback that returns 404 for unknown paths.
+runtime: python312
 
 handlers:
+- url: /
+  static_files: static/index.html
+  upload: static/index\.html
+  secure: always
+
+# Resume download button (was a Flask route on the old Python 2.7 app)
+- url: /download
+  static_files: static/resume.pdf
+  upload: static/resume\.pdf
+  mime_type: application/pdf
+  http_headers:
+    Content-Disposition: attachment; filename="Eric-Proulx-Resume.pdf"
+  secure: always
+
+- url: /favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon\.ico
+
 - url: /static
   static_dir: static
-- url: /.*
-  script: main.app
+  secure: always
 
-skip_files:
-- ^.*node_modules(/.*)?
+- url: /.*
+  script: auto
+  secure: always
